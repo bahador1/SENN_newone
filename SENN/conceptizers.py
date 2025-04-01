@@ -24,7 +24,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 
 from torch.autograd import Function
-from torch.legacy import nn as nn_legacy
+# from torch.legacy import nn as nn_legacy
 from torch.autograd import Variable
 
 #===============================================================================

@@ -26,6 +26,8 @@ import operator
 import matplotlib
 import matplotlib.pyplot as plt
 
+sys.path.append('.')
+
 # Torch-related
 import torch
 from torch.utils.data import TensorDataset
@@ -64,8 +66,8 @@ def load_mnist_data(valid_size=0.1, shuffle=True, random_seed=2008, batch_size =
                            transforms.Normalize((0.1307,), (0.3081,))
                        ])
 
-    train = MNIST('data/MNIST', train=True, download=True, transform=transform)
-    test  = MNIST('data/MNIST', train=False, download=True, transform=transform)
+    train = MNIST('../../Data/mnist_data', train=True, download=True, transform=transform)
+    test  = MNIST('../../Data/mnist_data', train=False, download=True, transform=transform)
 
     num_train = len(train)
     indices = list(range(num_train))
